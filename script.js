@@ -83,6 +83,37 @@
             navLinks.classList.toggle('active');
         }
 
+        // Button hover effects
+        const enrollBtn = document.getElementById('enroll-btn');
+        if (enrollBtn) {
+            enrollBtn.addEventListener('mouseover', function() {
+                this.src = 'placeholder_hover.png';
+            });
+            enrollBtn.addEventListener('mouseout', function() {
+                this.src = 'placeholder_normal.png';
+            });
+        }
+
+        const knowMore1 = document.getElementById('know-more-1');
+        if (knowMore1) {
+            knowMore1.addEventListener('mouseover', function() {
+                this.querySelector('img').src = 'images/Pixel Arrow straight.png';
+            });
+            knowMore1.addEventListener('mouseout', function() {
+                this.querySelector('img').src = 'images/Pixel Arrow.png';
+            });
+        }
+
+        const knowMore2 = document.getElementById('know-more-2');
+        if (knowMore2) {
+            knowMore2.addEventListener('mouseover', function() {
+                this.querySelector('img').src = 'images/Pixel Arrow straight.png';
+            });
+            knowMore2.addEventListener('mouseout', function() {
+                this.querySelector('img').src = 'images/Pixel Arrow.png';
+            });
+        }
+
         // Add mobile menu styles dynamically if screen is small
         if (window.innerWidth <= 768) {
             const style = document.createElement('style');

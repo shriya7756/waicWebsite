@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pink Tubelight Effect</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to bottom, #31091E 0%, #1a0410 100%);
+      overflow: hidden;
+    }
+
+    .light {
+      position: relative;
+      width: 800px;
+      height: 2px;
+      background: #ff4fb7;
+      border-radius: 50%;
+      box-shadow: 
+        0 0 15px #ff4fb7,
+        0 0 30px #ff4fb7,
+        0 0 60px #ff4fb7,
+        0 0 120px rgba(255, 79, 183, 0.8);
+    }
+
+    /* Glow above (like in your image) */
+    .light::before {
+      content: "";
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+      height: 400px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 79, 183, 0.4) 0%,
+        rgba(49, 9, 30, 0) 70%
+      );
+      filter: blur(30px);
+    }
+
+    /* Dark fade below the line */
+    .light::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1200px;
+      height: 400px;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(49, 9, 30, 0) 80%
+      );
+      filter: blur(40px);
+    }
+  </style>
+</head>
+<body>
+  <div class="light"></div>
+</body>
+</html>
