@@ -1,7 +1,9 @@
 .responsive {
   position: relative;
   width: 1440px;
-  height: 8791px;
+  height: 8877px;
+  transform: rotate(0deg);
+  opacity: 1;
   overflow-x: hidden;
 }
 
@@ -1568,7 +1570,7 @@ body::-webkit-scrollbar {
   margin-top: -2.00px;
   font-family: var(--typography-button-CTA-primary-font-family);
   font-weight: var(--typography-button-CTA-primary-font-weight);
-  color: var(--colourneutralslate);
+  color: #ECF1F4;
   font-size: var(--typography-button-CTA-primary-font-size);
   letter-spacing: var(--typography-button-CTA-primary-letter-spacing);
   line-height: var(--typography-button-CTA-primary-line-height);
@@ -1692,25 +1694,25 @@ body::-webkit-scrollbar {
 
 .navbar {
   display: flex;
-  width: 1000px; /* Fixed (1,200px) */
-  height: 50px;  /* Fixed (50px) */
+  width: 1000px; 
+  height: 50px;  
   align-items: center;
   justify-content: center;
-  gap: 10px;     /* Gap: 10px */
-  padding: 8px 16px; /* 8px | 16px | 8px | 16px */
-  position: fixed; /* keep navbar visible */
-  top: 40px;      /* Top: 40px */
-  left: 50%;      /* Center horizontally */
-  transform: translateX(-50%); /* Center the navbar */
-  background-color: rgba(236, 241, 244, 0.01); /* #ECF1F4 at 1% */
-  border: 1px solid rgba(217, 217, 217, 0.01); /* #D9D9D9 at 1% */
+  gap: 10px;     
+  padding: 8px 16px; 
+  position: fixed; 
+  top: 40px;      
+  left: 50%;      
+  transform: translateX(-50%); 
+  background-color: rgba(236, 241, 244, 0.01); 
+  border: 1px solid rgba(217, 217, 217, 0.01); 
   border-radius: 99px;
   overflow: hidden;
-  /* Three inner shadows from the spec */
+  
   box-shadow:
-    inset 1px 1px 2px rgba(255, 255, 255, 0.30),  /* #FFFFFF 30% */
-    inset -1px -1px 2px rgba(255, 255, 255, 0.10), /* #FFFFFF 10% */
-    inset 0 1px 10px rgba(255, 255, 255, 0.20);    /* #FFFFFF 20% */
+    inset 1px 1px 2px rgba(255, 255, 255, 0.30),  
+    inset -1px -1px 2px rgba(255, 255, 255, 0.10), 
+    inset 0 1px 10px rgba(255, 255, 255, 0.20);    
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   z-index: 1000;
@@ -1762,6 +1764,10 @@ body::-webkit-scrollbar {
   padding: 10px;
   position: relative;
   flex: 0 0 auto;
+}
+
+.hamburger-menu {
+  display: none;
 }
 
 .text-wrapper-22 {
@@ -1834,3 +1840,440 @@ a.button-text-wrapper {
 }
 
 /* Removed CSS scaling; handled via script.js for precise centering without distortion */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .responsive {
+    width: 375px;
+    height: auto; 
+  }
+
+  .responsive .pink-light-gradient {
+    width: 375px;
+    height: 812px;
+    background: linear-gradient(180deg, #31091E 0%, rgba(49, 9, 30, 0) 50%, #31091E 100%);
+  }
+
+  .navbar {
+    width: 367px;
+    height: 40px;
+    top: 20px;
+    left: 4px;
+    gap: 10px;
+  }
+
+  .hamburger-menu {
+    width: 40px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navicon {
+    width: 54px;
+    height: 32.31496047973633px;
+  }
+
+  .logo-2 {
+    width: 315px;
+    height: 189px;
+    top: 192px;
+    left: 30px;
+  }
+
+  .responsive .frame-2 {
+    width: 335px;
+    height: 160px;
+    align-items: center;
+  }
+
+  .responsive .we-are-on-a-mission {
+    width: 335px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -2%;
+    text-align: center;
+  }
+
+  .responsive .text-wrapper-2 {
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: -1%;
+    text-align: center;
+  }
+
+  .responsive .p {
+    width: 335px;
+    height: 38px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    background: #8C8CA1;
+  }
+
+  .responsive .button-text-wrapper {
+    width: 220px;
+    height: 40px;
+    border-radius: 99px;
+    padding: 8px 20px;
+    background: #F1247BE5;
+    box-shadow: inset 1px 1px 2px rgba(236, 241, 244, 0.3), inset -1px -1px 2px rgba(236, 241, 244, 0.1), inset 0px 1px 10px rgba(236, 241, 244, 0.3);
+  }
+
+  .responsive .button-text-wrapper:hover {
+    background: #ECF1F4;
+    box-shadow: inset 1px 1px 2px rgba(236, 241, 244, 0.3), inset -1px -1px 2px rgba(236, 241, 244, 0.1), inset 0px 1px 10px rgba(236, 241, 244, 0.3);
+  }
+
+  .responsive .enroll-now {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 4%;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ECF1F4;
+  }
+
+  .responsive .button-text-wrapper:hover .enroll-now {
+    color: #F1247B;
+  }
+
+  /* Hide desktop nav menu on mobile */
+  .nav-nav-menu {
+    display: none;
+  }
+
+  /* Show hamburger on mobile */
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Who We Are Section */
+  .responsive .who-we-are {
+    width: 375px;
+    height: 1746px;
+    top: 784px;
+    border-radius: 20px 20px 0 0;
+    background: linear-gradient(220.69deg, #FAFCFE 11.2%, #FFAEDC 50%, #FAFCFE 88.8%);
+  }
+
+  .responsive .icon-graphic {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .responsive .WAIC-is-transforming {
+    width: 292px;
+    height: 84px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    background: #06061A;
+  }
+
+  .responsive .frame-5 {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .responsive .text-content-box {
+    width: 335px;
+    align-items: center;
+  }
+
+  .responsive .designed {
+    width: 335px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #4A4A68;
+  }
+
+  .responsive .button {
+    width: 153.3938751220703px;
+    height: 41.39387512207031px;
+    border-radius: 8px;
+    padding: 6px 14px 6px 16px;
+    background: #FAFCFE;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(6, 6, 26, 0.9) 0%, rgba(51, 51, 51, 0.7) 100%);
+  }
+
+  .responsive .text-wrapper-4 {
+    width: 88px;
+    height: 19px;
+  }
+
+  .responsive .pixel-arrow {
+    width: 29.393877029418945px;
+    height: 29.393877029418945px;
+  }
+
+  .responsive .frame-6 .icon-graphic {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+  }
+
+  .responsive .frame-6 .WAIC-is-transforming {
+    width: 300px;
+    height: 84px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    background: #06061A;
+  }
+
+  .responsive .frame-6 .designed {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #4A4A68;
+  }
+
+  .responsive .frame-6 .button {
+    width: 153.3938751220703px;
+    height: 41.39387512207031px;
+    border-radius: 8px;
+    padding: 6px 14px 6px 16px;
+    background: #FAFCFE;
+    border: 1px solid;
+    border-image-source: linear-gradient(90deg, rgba(6, 6, 26, 0.9) 0%, rgba(51, 51, 51, 0.7) 100%);
+  }
+
+  /* Impact Section */
+  .responsive .rectangle-2 {
+    width: 375px;
+    height: 1000px;
+    top: 2530px;
+    background: #06061A;
+  }
+
+  .responsive .impact {
+    width: 375px;
+    height: 826px;
+    top: 2610px;
+    gap: 100px;
+    padding: 40px 0;
+  }
+
+  .responsive .transparent-card {
+    width: 233px;
+    height: 160px;
+    border-radius: 40px;
+    padding: 36px 56px;
+    background: #ECF1F403;
+    box-shadow: inset 1px 1px 2px #FFFFFF4D, inset -1px -1px 2px #FFFFFF1A, inset 0px 1px 10px #FFFFFF4D;
+  }
+
+  .responsive .img-2 {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  .responsive .text-wrapper-5 {
+    width: 121px;
+    height: 28px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-align: center;
+    text-transform: uppercase;
+    background: #ECF1F4;
+  }
+
+  .responsive .girls-reached {
+    width: 121px;
+    height: 21px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    background: #FAFCFE;
+  }
+
+  .responsive .frame-wrapper {
+    width: 233px;
+    height: 160px;
+    border-radius: 40px;
+    padding: 36px 56px;
+    background: #ECF1F403;
+    box-shadow: inset 1px 1px 2px #FFFFFF4D, inset -1px -1px 2px #FFFFFF1A, inset 0px 1px 10px #FFFFFF4D;
+  }
+
+  .responsive .girls-reached-2 {
+    width: 121px;
+    height: 21px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    text-align: center;
+    background: #FAFCFE;
+  }
+
+  /* How We Solve The Problem Section */
+  .responsive .how-we-solve-the {
+    width: 381px;
+    height: 1788px;
+    top: 3496px;
+    left: -6px;
+    transform: rotate(-180deg);
+    opacity: 0.3;
+    background: #FAFCFE;
+  }
+
+  .responsive .sub-head-2 {
+    width: 351px;
+    height: 28px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -3%;
+    text-transform: uppercase;
+    background: #06061A;
+  }
+
+  .responsive .pillar-no {
+    width: 292px;
+    height: 21px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 3%;
+    background: #4A4A68;
+  }
+
+  .responsive .text-wrapper-7 {
+    width: 189px;
+    height: 21px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    background: #000000;
+  }
+
+  .responsive .start-with-the {
+    width: 300px;
+    height: 114px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #06061A;
+  }
+
+  .responsive .line {
+    width: 300.00000000000114px;
+    height: 0px;
+    border: 1px solid #666666;
+    opacity: 0.7;
+  }
+
+  .responsive .line-2 {
+    top: 3936px;
+    left: 38px;
+  }
+
+  .responsive .line-3 {
+    top: 4207px;
+    left: 38px;
+  }
+
+  .responsive .line-4 {
+    top: 4478px; /* Assuming equal distance */
+    left: 38px;
+  }
+
+  .responsive .line-5 {
+    top: 4749px; /* Assuming equal distance */
+    left: 38px;
+  }
+
+  /* Pillar 4 */
+  .responsive .frame-13 .text-wrapper-7 {
+    width: 166px;
+    height: 21px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    background: #000000;
+  }
+
+  .responsive .frame-13 .start-with-the {
+    width: 300px;
+    height: 95px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #06061A;
+  }
+
+  /* Pillar 5 */
+  .responsive .frame-14 .text-wrapper-7 {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: -2%;
+    background: #000000;
+  }
+
+  .responsive .join-a-community-of {
+    width: 300px;
+    height: 95px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    background: #06061A;
+  }
+
+  /* Add image for How We Solve The Problem section - same as desktop */
+  .responsive .img-3 {
+    /* Assuming same styles as desktop */
+  }
+
+  .responsive .submit {
+    color: #ECF1F4;
+  }
+}
