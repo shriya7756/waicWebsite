@@ -31,7 +31,9 @@
   height: 673px;
   top: 0;
   left: 0;
-  background: rgba(49, 9, 30, 0.9);
+  transform: rotate(0deg);
+  opacity: 0.9;
+  background: var(--Background, #31091E);
 }
 
 .responsive .footer-link {
@@ -59,7 +61,8 @@
 .responsive .text-wrapper-17 {
   font-family: var(--typography-button-nav-link-font-family);
   font-weight: var(--typography-button-nav-link-font-weight);
-  color: #ECF1F4;
+  background-color: #ECF1F4;
+  color: #000000;
   font-size: var(--typography-button-nav-link-font-size);
   letter-spacing: var(--typography-button-nav-link-letter-spacing);
   line-height: var(--typography-button-nav-link-line-height);
