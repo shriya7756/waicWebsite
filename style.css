@@ -1370,11 +1370,7 @@ body::-webkit-scrollbar {
 }
 
 .responsive .footer-graphic {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 668px;
+  display: none;
 }
 
 .responsive .footer-bg {
@@ -1383,7 +1379,7 @@ body::-webkit-scrollbar {
   top: 0;
   left: 0;
   height: 673px;
-  background-color: var(--colourpinklavender-pink);
+  background: var(--Background, #31091E);
   opacity: 0.9;
 }
 
@@ -1422,7 +1418,7 @@ body::-webkit-scrollbar {
   margin-top: -1.00px;
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
-  color: var(--colourneutralslate);
+  color: #ECF1F4;
   font-size: 14px;
   letter-spacing: 0;
   line-height: 14px;
@@ -1431,6 +1427,7 @@ body::-webkit-scrollbar {
 .responsive .text-wrapper-16 {
   font-weight: 700;
   line-height: 19.6px;
+  color: #ECF1F4;
 }
 
 .responsive .line-5 {
@@ -1439,6 +1436,7 @@ body::-webkit-scrollbar {
   height: 19px;
   margin-right: -1.00px;
   object-fit: cover;
+  color: #ECF1F4;
 }
 
 .responsive .AI-accelerator-for-wrapper {
@@ -1462,6 +1460,7 @@ body::-webkit-scrollbar {
 .responsive .text-wrapper-17 {
   line-height: 19.6px;
   text-decoration: underline;
+  color: #FFFFFFCC;
 }
 
 .responsive .stay-updated-form {
@@ -1619,7 +1618,7 @@ body::-webkit-scrollbar {
   margin-bottom: -25.00px;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
-  color: var(--colourneutralblueblack);
+  color: #ECF1F4;
   font-size: 260px;
   text-align: center;
   letter-spacing: -5.20px;
