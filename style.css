@@ -1436,7 +1436,7 @@ body::-webkit-scrollbar {
   height: 19px;
   margin-right: -1.00px;
   object-fit: cover;
-  color: #ECF1F4;
+  background: #FFFFFFCC;
 }
 
 .responsive .AI-accelerator-for-wrapper {
@@ -1618,7 +1618,8 @@ body::-webkit-scrollbar {
   margin-bottom: -25.00px;
   font-family: "Work Sans", sans-serif;
   font-weight: 700;
-  color: #ECF1F4;
+  color: #FFFFFFCC;
+
   font-size: 260px;
   text-align: center;
   letter-spacing: -5.20px;
