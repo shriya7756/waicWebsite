@@ -6,16 +6,12 @@
   opacity: 1;
   overflow-x: hidden;
   background: #06061A;
+  margin: 0 auto;
 }
-
-<<<<<<< HEAD
-=======
 /* Hide mobile layout by default; it will be enabled via media query */
 .iphone {
   display: none;
 }
-
->>>>>>> 17cd6c1 (Updated with mobile version)
 body {
   overflow-x: hidden;
 }
@@ -86,6 +82,55 @@ body::-webkit-scrollbar {
 .responsive .pink-top {
   /* hide top overlay so image is fully visible */
   display: none;
+}
+
+.responsive .hero-announcement {
+  position: absolute;
+  top: 85px;
+  left: -3px;
+  width: 382px;
+  height: 58px;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 7px;
+  background: #06061A80;
+  border-radius: 999px;
+  opacity: 1;
+}
+
+.responsive .hero-announcement-inner {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.responsive .hero-announcement-circle {
+  width: 24px;
+  height: 25px;
+  border-radius: 50%;
+  background: #F1247B;
+  flex-shrink: 0;
+}
+
+.responsive .hero-announcement-text-wrapper {
+  background: #F5C939;
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.responsive .hero-announcement-text {
+  width: 311px;
+  height: 38px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #06061A;
 }
 
 .responsive .logo {
@@ -2783,6 +2828,57 @@ img, video { max-width: 100%; height: auto; }
   .iphone .pink-left { left: 0; width: 188px; mix-blend-mode: color-dodge; background: conic-gradient( from 90deg at 50% 50%, rgba(248, 248, 248, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(170, 170, 170, 1) 99% ); position: absolute; top: 0; height: 812px; }
   .iphone .pink-top { left: 0; width: 375px; position: absolute; top: 0; height: 812px; }
   .iphone .logo { position: absolute; top: 192px; left: calc(50.00% - 158px); width: 315px; height: 189px; aspect-ratio: 1.67; }
+
+  /* Mobile hero announcement banner (same content as desktop, sized for mobile) */
+  .iphone .hero-announcement {
+    position: absolute;
+    top: 120px;
+    left: 12px;
+    width: 351px; /* 382 - side margins to fit 375 canvas */
+    height: 58px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 7px;
+    background: #06061A80;
+    border-radius: 999px;
+    opacity: 1;
+    box-sizing: border-box;
+  }
+
+  .iphone .hero-announcement-inner {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .iphone .hero-announcement-circle {
+    width: 24px;
+    height: 25px;
+    border-radius: 50%;
+    background: #F1247B;
+    flex-shrink: 0;
+  }
+
+  .iphone .hero-announcement-text-wrapper {
+    background: #F5C939;
+    padding: 4px 8px;
+    border-radius: 999px;
+  }
+
+  .iphone .hero-announcement-text {
+    width: 311px;
+    max-height: 38px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    color: #06061A;
+  }
   .iphone .hero-content { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; position: absolute; top: 441px; left: calc(50.00% - 182px); }
   .iphone .frame { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px 4px; position: relative; flex: 0 0 auto; }
   .iphone .we-are-on-a-mission { position: relative; width: 335px; margin-top: -1.00px; font-family: "Work Sans-Bold", Helvetica; font-weight: 400; color: var(--colourneutrallight); font-size: 32px; text-align: center; line-height: 40px; }
@@ -2988,11 +3084,8 @@ img, video { max-width: 100%; height: auto; }
     gap: 10px;
     position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 375px;
-    padding: 0 12px;
+    left: 4px;
+    width: 367px;
     box-sizing: border-box;
     overflow: visible;
   }
@@ -3034,14 +3127,20 @@ img, video { max-width: 100%; height: auto; }
     margin-bottom: -8px;
     box-sizing: border-box;
   }
-  .iphone .logo-2 { position: relative; width: 54px; height: 32.31px; margin-top: -0.16px; margin-bottom: -0.16px; }
+  .iphone .logo-2 {
+    position: relative;
+    width: 54px;
+    height: 30px;
+  }
+
+  /* Hamburger menu dimensions */
   .iphone .hamburger-menu {
     display: flex;
     flex-direction: column;
     width: 40px;
     height: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 4px;
     position: relative;
     background: none;
