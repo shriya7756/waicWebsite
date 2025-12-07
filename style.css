@@ -1,6 +1,8 @@
 .responsive {
   position: relative;
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   height: 8877px;
   transform: rotate(0deg);
   opacity: 1;
@@ -459,6 +461,16 @@ body::-webkit-scrollbar {
   box-shadow: 0 2px 8px rgba(6, 6, 26, 0.12);
 }
 
+/* Join Our Program button hover effect */
+.responsive .button-primary:hover {
+  background-color: #ffffff !important;
+}
+
+.responsive .button-primary:hover .join-our-program-2,
+.responsive .button-primary:hover .join-our-program {
+  color: #F1247B !important;
+}
+
 .responsive .button:hover::before {
   background: linear-gradient(90deg, #06061a 0%, #333333 100%);
 }
@@ -466,10 +478,49 @@ body::-webkit-scrollbar {
 /* CTA label default vs hover (from spec images) */
 .responsive .button .text-wrapper-4 {
   opacity: 0.7; /* 70% when not hovered */
+  transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .responsive .button:hover .text-wrapper-4 {
   opacity: 1; /* 100% on hover */
+}
+
+/* Know More and Coming Soon buttons hover effect */
+.responsive .button.know-more:hover .text-wrapper-4,
+.responsive .button.know-more:hover .text-wrapper-2 {
+  color: #666666 !important; /* Grey text on hover */
+}
+
+/* Replace arrow on hover */
+.responsive .button.know-more {
+  position: relative;
+}
+
+.responsive .button.know-more .pixel-arrow {
+  transition: opacity 0.3s ease;
+}
+
+.responsive .button.know-more:hover .pixel-arrow {
+  opacity: 0;
+}
+
+.responsive .button.know-more .pixel-arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #666666; /* Grey color to match text */
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>') no-repeat center;
+  mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>') no-repeat center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.responsive .button.know-more:hover .pixel-arrow::after {
+  opacity: 1;
 }
 
 .responsive .link-text-icon {
@@ -2374,6 +2425,39 @@ a.button-text-wrapper {
     flex-direction: column;
     gap: 16px;
   }
+  
+  /* Center lines between pillars */
+  .responsive .line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40px;
+    width: 2px;
+    background: linear-gradient(to bottom, #F1247B, #9B4DCA);
+    margin: 10px 0;
+  }
+  
+  /* Position each line between pillars */
+  .responsive .frame-9::after,
+  .responsive .frame-13::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: linear-gradient(to bottom, #F1247B, #9B4DCA);
+    z-index: 1;
+  }
+  
+  .responsive .frame-9::after {
+    bottom: -8px;
+    height: 40px;
+  }
+  
+  .responsive .frame-13::before {
+    top: -8px;
+    height: 40px;
+  }
 
   .responsive .line,
   .responsive .line-2,
@@ -2401,10 +2485,16 @@ a.button-text-wrapper {
     position: static;
     order: 2;
     width: 90%;
-    max-width: 420px;
+    max-width: 480px; /* Increased max-width */
     height: auto;
-    margin: 16px auto 0;
+    margin: 30px auto 0; /* Increased top margin */
     transform: none;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .responsive .img-3:hover {
+    transform: scale(1.05);
   }
 
   .responsive .sub-head-2 {
@@ -3076,33 +3166,32 @@ img, video { max-width: 100%; height: auto; }
   .iphone .text-wrapper-23 { position: relative; display: flex; align-items: center; justify-content: center; width: fit-content; margin-top: -1.00px; font-family: "Work Sans-Bold", Helvetica; font-weight: 700; color: var(--colourneutralblueblack); font-size: 70px; text-align: center; letter-spacing: -1.40px; line-height: 49.1px; white-space: nowrap; }
   .iphone .frame-35 { display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 10px; position: absolute; top: 520px; left: calc(50.00% - 190px); opacity: 0.7; }
   .iphone .text-wrapper-24 { position: relative; display: flex; align-items: center; justify-content: center; width: fit-content; margin-top: -1.00px; font-family: "Work Sans-Bold", Helvetica; font-weight: 700; color: var(--colourneutralblueblack); font-size: 60px; text-align: center; letter-spacing: -1.20px; line-height: 49.1px; white-space: nowrap; }
-  .iphone .navbar-menu-mobile {
-    display: flex;
+  .iphone .nav-nav-menu {
+    display: none;
     flex-direction: column;
-    height: 40px;
-    align-items: center;
-    gap: 10px;
+    width: 100%;
+    background-color: rgba(6, 6, 26, 0.9);
+    border-radius: 12px;
+    padding: 10px 0;
+    margin-top: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: 20px;
-    left: 4px;
-    width: 367px;
-    box-sizing: border-box;
-    overflow: visible;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
   }
 
   .iphone .navbar-mobile {
     display: flex;
-    height: 40px;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 16px;
-    position: relative;
     width: 100%;
+    height: 40px;
+    position: relative;
+    opacity: 1;
+    transform: rotate(0deg);
     background-color: #ecf0f403;
     border-radius: 999px;
-    overflow: hidden;
     box-shadow: inset 1px 1px 2px #ffffff4c, inset -1px -1px 2px #ffffff1a, inset 0px 1px 10px #ffffff33;
+    overflow: hidden;
   }
 
   .iphone .texture {
@@ -3120,17 +3209,16 @@ img, video { max-width: 100%; height: auto; }
     height: 40px;
     align-items: center;
     justify-content: space-between;
-    gap: 0;
     padding: 4px 8px;
     position: relative;
-    margin-top: -8px;
-    margin-bottom: -8px;
     box-sizing: border-box;
   }
   .iphone .logo-2 {
-    position: relative;
     width: 54px;
     height: 30px;
+    object-fit: contain;
+    opacity: 1;
+    transform: rotate(0deg);
   }
 
   /* Hamburger menu dimensions */
@@ -3139,15 +3227,14 @@ img, video { max-width: 100%; height: auto; }
     flex-direction: column;
     width: 40px;
     height: 20px;
-    align-items: center;
     justify-content: space-between;
-    gap: 4px;
-    position: relative;
+    align-items: flex-end;
     background: none;
     border: none;
-    color: var(--colourneutrallight);
-    font-size: 20px;
+    padding: 0;
     cursor: pointer;
+    opacity: 1;
+    transform: rotate(0deg);
   }
 
   .iphone .hamburger-icon { display: inline; }
